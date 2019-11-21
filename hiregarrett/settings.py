@@ -25,7 +25,9 @@ SECRET_KEY = '!ie+)lj@9d=q!)9k_z+7bjsgey!a86deoetx833^kk=hkx&@za'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'garrettatucker.pythonanywhere.com'
+]
 
 
 # Application definition
