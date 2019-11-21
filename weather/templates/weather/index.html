@@ -6,59 +6,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>What's the weather like?</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.css" />
 </head>
-    <section class="hero is-primary">
-        <div class="hero-body">
-            <div class="container">
-                <h1 class="title">
-                    What's the weather like?
-                </h1>
+    <section>
+        <div>
+            <div>
+                {% if user.is_authenticated %}
+                    <h1>
+                        Hello, {{ user.get_username }}. Lets check the weather.
+                    </h1>
+                {% else %}
+                    <h1>Log in / register to create your personalized City List</h1>
+                {% endif %}
             </div>
         </div>
     </section>
-    <section class="section">
-        <div class="container">
-            <div class="columns">
-                <div class="column is-offset-4 is-4">
+    <section>
+        <div>
+            <div>
+                <div>
                     <form method="POST">
                         {% csrf_token %}
-                        <div class="field has-addons">
-                            <div class="control is-expanded">
+                        <div>
+                            <div>
                                 {{ form.name }}
                             </div>
-                            <div class="control">
-                                <button class="button is-info">
+                            <di>
+                                <button>
                                     Add City
                                 </button>
                             </div>
+                            {% if message %}
+                                <div class="notification">{{ message }}</div>
+                            {% endif %}
                         </div>
                     </form>
                 </div>
             </div>
         </div>
     </section>
-    <section class="section">
-        <div class="container">
-            <div class="columns">
-                <div class="column is-offset-4 is-4">
+    <section>
+        <div>
+            <div>
+                <div>
                     {% for weather in weather_data %}
-                    <div class="box">
-                        <article class="media">
-                            <div class="media-left">
-                                <figure class="image is-50x50">
+                    <div>
+                        <article>
+                            <div>
+                                <figure>
                                     <img src="http://openweathermap.org/img/w/{{ weather.icon }}.png" alt="Image">
                                 </figure>
                             </div>
-                            <div class="media-content">
-                                <div class="content">
+                            <div>
+                                <div>
                                     <p>
-                                        <span class="title">{{ weather.city }}</span>
+                                        <span>{{ weather.city|capfirst }}</span>
                                         <br>
-                                        <span class="subtitle">{{ weather.temperature }}° F</span>
+                                        <span>{{ weather.temperature }}° F</span>
                                         <br> {{ weather.description }}
                                     </p>
+                                    <a href="{% url 'weather:delete_city' weather.city %}"><button>Delete</button></a>
                                 </div>
                             </div>
                         </article>
