@@ -26,6 +26,7 @@ SECRET_KEY = '!ie+)lj@9d=q!)9k_z+7bjsgey!a86deoetx833^kk=hkx&@za'
 DEBUG = True
 
 ALLOWED_HOSTS = [
+    'localhost',
     'garrettatucker.pythonanywhere.com'
 ]
 

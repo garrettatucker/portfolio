@@ -3,7 +3,9 @@ import requests
 from .models import City
 from .forms import CityForm
 from django.contrib.auth.models import User
+from django.contrib.auth.decorators import login_required
 
+@login_required(login_url='/login')
 def index(request):
     
 
