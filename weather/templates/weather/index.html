@@ -1,9 +1,9 @@
-{% extends "base.html" %} 
+{% extends "portfolio/base.html" %} 
 {% block content %}
 <div class="container-fluid">
 <section>
     <div>
-        <div>
+        <div class="text-center">
             {% if user.is_authenticated %}
                 <h1>
                     Hello, {{ user.get_username }}. Lets check the weather.
@@ -33,11 +33,12 @@
     </div>
 </section>
 <section>
-    <div>
+    <div class="row">
+        <div class="col-md"></div>
         <div>
-            <div class="text-center">
+            <div class="col-md text-center">
                 {% for weather in weather_data %}
-                <div>
+                <div class="card">
                     <article>
                         <div>
                             <figure>
@@ -53,13 +54,16 @@
                                     <br> {{ weather.description }}
                                 </p>
                                 <a href="{% url 'weather:delete_city' weather.city %}"><button class="btn btn-danger">Delete</button></a>
+                                
                             </div>
                         </div>
                     </article>
                 </div>
+                <br>
                 {% endfor %}
             </div>
         </div>
+        <div class="col-md"></div>
     </div>
 </section>
 </div>

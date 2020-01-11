@@ -25,7 +25,7 @@ def index(request):
                 if new_city_weather['cod'] == 200:
                     instance = form.save() #sets an instance for form
                     instance.user.set([request.user.pk]) #requests user id to weather model
-                    instance.save() # will validate and save if validate
+                    instance.save() # will validate and save if validated
                 else:
                     err_msg = 'City does not exist'
             else:

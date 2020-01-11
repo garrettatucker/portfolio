@@ -1,0 +1,33 @@
+{% extends "portfolio/base.html" %} 
+{% block content %}
+{% load static %}
+<div class="row">
+    <div class="col-md-3 text-center"></div>
+    <div class="col-md-3 text-center">
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">Weather app</h5>
+                <p class="card-text">This weather app allows the user to create a personalized list of cities that provides real time weather information.
+                        Each list is private and unique to each user, and the user has the ability to update the list by adding or deleting cities
+                        at any time.<p>
+                        <a href="/weather" type="button" class="btn btn-light">Demo</a>
+                        <a href="https://github.com/garrettatucker/portfolio/tree/master/weather" type="button" target="_blank" class="btn btn-light">Code</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3 text-center">
+        <div class="card" style="width: 18rem;">
+            
+            <div class="card-body">
+                <h5 class="card-title">Blog</h5>
+                <!--<img class="card-img-top" src="{% static 'images/blog.PNG' %}" alt="Photo of Blog app">-->
+                <p class="card-text">This blog app allows me to provide posts for users to follow to keep up to date on my web development journey.
+                        Users are able to view all posts, as well as, view full individual posts.</p>
+                <a href="/blog" type="button" class="btn btn-light">Demo</a>
+                <a href="https://github.com/garrettatucker/portfolio/tree/master/blog" type="button" target="_blank" class="btn btn-light">Code</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3 text-center"></div>
+</div>
+{% endblock content %}
