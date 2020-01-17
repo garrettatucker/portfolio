@@ -1,6 +1,8 @@
 {% extends 'portfolio/base.html' %} {% block content %}
 {% load crispy_forms_tags %}
-    <div>
+<div class="row">
+    <div class="col-4"></div>
+    <div class="col-4">
         <form method="POST">
             {% csrf_token %}
             <fieldset>
@@ -18,4 +20,6 @@
             </small>
         </div>
     </div>
+    <div class="col-4"></div>
+</div>
 {% endblock content %}

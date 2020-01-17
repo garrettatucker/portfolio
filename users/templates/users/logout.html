@@ -1,8 +1,14 @@
 {% extends 'portfolio/base.html' %} {% block content %}
-<h2>You have been Logged out.</h2>
-<div>
-    <small>
-        <a href="{% url 'login' %}">Log back in.</a>
-    </small>
+<div class="row">
+    <div class="col-12">
+        <h2>You have been Logged out.</h2>
+    </div>
+    <div class="col-12">
+        <small>
+            <a href="{% url 'login' %}">Log back in.</a>
+        </small>
+    </div>
 </div>
+
+
 {% endblock content %}

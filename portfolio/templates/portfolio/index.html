@@ -1,33 +1,95 @@
 {% extends "portfolio/base.html" %} 
 {% block content %}
 {% load static %}
+<!--Projects section-->
+<div class="row"  id="projects">
+    <div class="col-12">
+        <h1>Projects</h1>
+    </div>
+</div>
 <div class="row">
-    <div class="col-md-3 text-center"></div>
-    <div class="col-md-3 text-center">
+    <div class="col-md-3"></div>
+    <div class="col-md-3">
         <div class="card" style="width: 18rem;">
             <div class="card-body">
-                <h5 class="card-title">Weather app</h5>
-                <p class="card-text">This weather app allows the user to create a personalized list of cities that provides real time weather information.
-                        Each list is private and unique to each user, and the user has the ability to update the list by adding or deleting cities
-                        at any time.<p>
+                <h5 class="card-title">Weather Around the World</h5>
+                <p class="card-text">Create your own personal list filled with your favorite cities from anywhere in the world.
+                    Get up to date weather information that allows you to satisfy your curiosity, or to help you plan an upcoming trip.<p>
                         <a href="/weather" type="button" class="btn btn-light">Demo</a>
                         <a href="https://github.com/garrettatucker/portfolio/tree/master/weather" type="button" target="_blank" class="btn btn-light">Code</a>
             </div>
         </div>
     </div>
-    <div class="col-md-3 text-center">
+    <div class="col-md-3">
         <div class="card" style="width: 18rem;">
             
             <div class="card-body">
-                <h5 class="card-title">Blog</h5>
+                <h5 class="card-title">Personal Blog</h5>
                 <!--<img class="card-img-top" src="{% static 'images/blog.PNG' %}" alt="Photo of Blog app">-->
-                <p class="card-text">This blog app allows me to provide posts for users to follow to keep up to date on my web development journey.
-                        Users are able to view all posts, as well as, view full individual posts.</p>
+                <p class="card-text">Keep up to date on my coding journey. Creating an account allows you to view and comment on posts.</p>
                 <a href="/blog" type="button" class="btn btn-light">Demo</a>
                 <a href="https://github.com/garrettatucker/portfolio/tree/master/blog" type="button" target="_blank" class="btn btn-light">Code</a>
             </div>
         </div>
     </div>
-    <div class="col-md-3 text-center"></div>
+    <div class="col-md-3"></div>
+</div>
+
+<!--About section-->
+<div id="about">
+<div class="row">
+    <div class="col-12">
+        <h1>About</h1>
+    </div>
+</div>
+    <div class="row">
+        <div class="col-6">
+            <div class="card-body">
+                <h2 class="card-title">Education</h3>
+                <ul class="card-text">
+                    <li>Launchcode, LC101 Programming Course — 2018</li>
+                    <li>University of Missouri - Kansas City, computer science courses - 2015</li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="card-body">
+                <h2 class="card-title">Work Experience</h2>
+                <p>Shift Leader, Cracker barrel, Independence, MO — March 2015- PRESENT</p>
+                <ul class="card-text">
+                    <li>Tasked with leadership roles, such as training, and managing staff to create efficient work flow.</li>
+                    <li>Trained dozens of new staff members over 2 year period, while also providing mentorship to existing employees at any needed time.</li>
+                    <li>Cut food waste on shifts worked by 25% over a 6 month period to assist in meeting company standards</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Contact Section-->
+    <div id="contact">
+    <div class="row">
+        <div class="col-12">
+            <h1>Contact</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <h4>Please feel free to reach out to me.</h4>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6">
+            <div class="card-body">
+                <h2 class="card-title">Email</h2>
+                <h2>garrettatucker@gmail.com</h2>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="card-body">
+                <h2 class="card-title">Phone</h2>
+                <h2>816-507-6151</h2>
+            </div>
+        </div>
+    </div>
 </div>
 {% endblock content %}
