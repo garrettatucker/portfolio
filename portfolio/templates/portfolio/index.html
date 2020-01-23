@@ -2,92 +2,80 @@
 {% block content %}
 {% load static %}
 <!--Projects section-->
-<div class="row"  id="projects">
-    <div class="col-12">
-        <h1>Projects</h1>
-    </div>
-</div>
-<div class="row">
-    <div class="col-md-3"></div>
-    <div class="col-md-3">
-        <div class="card" style="width: 18rem;">
-            <div class="card-body">
-                <h5 class="card-title">Weather Around the World</h5>
-                <p class="card-text">Create your own personal list filled with your favorite cities from anywhere in the world.
-                    Get up to date weather information that allows you to satisfy your curiosity, or to help you plan an upcoming trip.<p>
-                        <a href="/weather" type="button" class="btn btn-light">Demo</a>
-                        <a href="https://github.com/garrettatucker/portfolio/tree/master/weather" type="button" target="_blank" class="btn btn-light">Code</a>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-3">
-        <div class="card" style="width: 18rem;">
-            
-            <div class="card-body">
-                <h5 class="card-title">Personal Blog</h5>
-                <!--<img class="card-img-top" src="{% static 'images/blog.PNG' %}" alt="Photo of Blog app">-->
-                <p class="card-text">Keep up to date on my coding journey. Creating an account allows you to view and comment on posts.</p>
-                <a href="/blog" type="button" class="btn btn-light">Demo</a>
-                <a href="https://github.com/garrettatucker/portfolio/tree/master/blog" type="button" target="_blank" class="btn btn-light">Code</a>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-3"></div>
-</div>
-
-<!--About section-->
-<div id="about">
-<div class="row">
-    <div class="col-12">
-        <h1>About</h1>
-    </div>
-</div>
-    <div class="row">
-        <div class="col-6">
-            <div class="card-body">
-                <h2 class="card-title">Education</h3>
-                <ul class="card-text">
-                    <li>Launchcode, LC101 Programming Course — 2018</li>
-                    <li>University of Missouri - Kansas City, computer science courses - 2015</li>
-                </ul>
-            </div>
-        </div>
-        <div class="col-6">
-            <div class="card-body">
-                <h2 class="card-title">Work Experience</h2>
-                <p>Shift Leader, Cracker barrel, Independence, MO — March 2015- PRESENT</p>
-                <ul class="card-text">
-                    <li>Tasked with leadership roles, such as training, and managing staff to create efficient work flow.</li>
-                    <li>Trained dozens of new staff members over 2 year period, while also providing mentorship to existing employees at any needed time.</li>
-                    <li>Cut food waste on shifts worked by 25% over a 6 month period to assist in meeting company standards</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</div>
-<!--Contact Section-->
-    <div id="contact">
-    <div class="row">
+<div class="home-body">
+    <div class="row"  id="projects">
         <div class="col-12">
+            <h1>Projects</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-3"></div>
+        <div class="col-3">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Weather Around the World</h5>
+                    <p class="card-text">Create your own personal list filled with your favorite cities from anywhere in the world.
+                        Get up to date weather information that allows you to satisfy your curiosity, or to help you plan an upcoming trip.<p>
+                            <a href="/weather" type="button" class="btn btn-light">Demo</a>
+                            <a href="https://github.com/garrettatucker/portfolio/tree/master/weather" type="button" target="_blank" class="btn btn-light">Code</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Personal Blog</h5>
+                    <!--<img class="card-img-top" src="{% static 'images/blog.PNG' %}" alt="Photo of Blog app">-->
+                    <p class="card-text">Keep up to date on my coding journey. Creating an account allows you to view and comment on posts.</p>
+                    <a href="/blog" type="button" class="btn btn-light">Demo</a>
+                    <a href="https://github.com/garrettatucker/portfolio/tree/master/blog" type="button" target="_blank" class="btn btn-light">Code</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-3"></div>
+    </div>
+
+    <!--About section-->
+    <div id="about-contact">
+    <div class="row">
+        <div class="col-6">
+            <h1>About</h1>
+        </div>
+        <div class="col-6">
             <h1>Contact</h1>
         </div>
     </div>
-    <div class="row">
-        <div class="col-12">
-            <h4>Please feel free to reach out to me.</h4>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-6">
-            <div class="card-body">
-                <h2 class="card-title">Email</h2>
-                <h2>garrettatucker@gmail.com</h2>
+        <div class="row">
+            <div class="col-6 card">
+                <div>
+                    <div class="card-body">
+                        <h2 class="card-title">Education</h3>
+                        <ul class="card-text">
+                            <li>Launchcode, LC101 Programming Course — 2018</li>
+                            <li>University of Missouri - Kansas City, computer science courses - 2015</li>
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <div class="card-body">
+                        <h2 class="card-title">Work Experience</h2>
+                        <p>Shift Leader, Cracker barrel, Independence, MO — March 2015- PRESENT</p>
+                        <ul class="card-text">
+                            <li>Tasked with leadership roles, such as training, and managing staff to create efficient work flow.</li>
+                            <li>Trained dozens of new staff members over 2 year period, while also providing mentorship to existing employees at any needed time.</li>
+                            <li>Cut food waste on shifts worked by 25% over a 6 month period to assist in meeting company standards</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="col-6">
-            <div class="card-body">
-                <h2 class="card-title">Phone</h2>
-                <h2>816-507-6151</h2>
+                <div class="col-6 card">
+                    <div class="card-body">
+                        <h2 class="card-title">Email</h2>
+                        <h3 class="card-text">garrettatucker@gmail.com</h3>
+                        <h2 class="card-title">Phone</h2>
+                        <h3 class="card-text">816-507-6151</h3>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

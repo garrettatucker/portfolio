@@ -1,70 +1,72 @@
 {% extends "portfolio/base.html" %} 
 {% block content %}
-<div class="container-fluid" id="weather-container">
-<section>
-    <div>
-        <div class="text-center">
-            {% if user.is_authenticated %}
-                <h1>
-                    Hello, {{ user.get_username }}. Lets check the weather.
-                </h1>
-            {% else %}
-                <h1>Log in / register to create your personalized City List</h1>
-            {% endif %}
-        </div>
-    </div>
-</section>
-<section>
-    <div>
-        <form method="POST">
-            {% csrf_token %}
-            <div class="row.text-center">
-                <div class="text-center">
-                    {{ form.name }}
-                    <button class="btn btn-primary">
-                        Add City
-                    </button>
-                {% if message %}
-                    <div class="notification">{{ message }}</div>
-                {% endif %}
-                </div>
-            </div>
-        </form>
-    </div>
-</section>
-<section>
-    <div class="row">
-        <div class="col-md"></div>
+<div class="weather-body">
+    <div class="container-fluid" id="weather-container">
+    <section>
         <div>
-            <div class="col-md text-center">
-                {% for weather in weather_data %}
-                <div class="card">
-                    <article>
-                        <div>
-                            <figure>
-                                <img src="http://openweathermap.org/img/w/{{ weather.icon }}.png" alt="Image">
-                            </figure>
-                        </div>
-                        <div>
-                            <div>
-                                <p>
-                                    <span>{{ weather.city|capfirst }}</span>
-                                    <br>
-                                    <span>{{ weather.temperature }}° F</span>
-                                    <br> {{ weather.description }}
-                                </p>
-                                <a href="{% url 'weather:delete_city' weather.city %}"><button class="btn btn-danger">Delete</button></a>
-                                
-                            </div>
-                        </div>
-                    </article>
-                </div>
-                <br>
-                {% endfor %}
+            <div class="text-center">
+                {% if user.is_authenticated %}
+                    <h1>
+                        Hello, {{ user.get_username }}. Lets check the weather.
+                    </h1>
+                {% else %}
+                    <h1>Log in / register to create your personalized City List</h1>
+                {% endif %}
             </div>
         </div>
-        <div class="col-md"></div>
+    </section>
+    <section>
+        <div>
+            <form method="POST">
+                {% csrf_token %}
+                <div class="row.text-center">
+                    <div class="text-center">
+                        {{ form.name }}
+                        <button class="btn btn-primary">
+                            Add City
+                        </button>
+                    {% if message %}
+                        <div class="notification">{{ message }}</div>
+                    {% endif %}
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+    <section>
+        <div class="row">
+            <div class="col-md"></div>
+            <div>
+                <div class="col-md text-center">
+                    {% for weather in weather_data %}
+                    <div class="card">
+                        <article>
+                            <div>
+                                <figure>
+                                    <img src="http://openweathermap.org/img/w/{{ weather.icon }}.png" alt="Image">
+                                </figure>
+                            </div>
+                            <div>
+                                <div>
+                                    <p>
+                                        <span>{{ weather.city|capfirst }}</span>
+                                        <br>
+                                        <span>{{ weather.temperature }}° F</span>
+                                        <br> {{ weather.description }}
+                                    </p>
+                                    <a href="{% url 'weather:delete_city' weather.city %}"><button class="btn btn-danger">Delete</button></a>
+                                    
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <br>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="col-md"></div>
+        </div>
+    </section>
     </div>
-</section>
 </div>
 {%endblock%}

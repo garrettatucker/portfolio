@@ -23,17 +23,37 @@
   
             }
             .row {
-                padding: 25px;
+                padding: 20px;
             }
             div {
                 text-align: center;
             }
             body {
                 font-family: 'Bebas Neue', cursive;
-                font-size: 24px;
+                font-size: 16px;
                 background-color: #fdfdfd;
             }
-        
+            .home-body{
+                background: url("https://cdn.pixabay.com/photo/2016/09/30/03/39/pineapple-1704341_960_720.jpg") 50% no-repeat fixed;
+                -webkit-background-size: cover;
+                -moz-background-size: cover;
+                -o-background-size: cover;
+                background-size: cover;
+            }
+            .weather-body {
+                background: url("https://cdn.pixabay.com/photo/2017/05/20/20/22/clouds-2329680_960_720.jpg") 50% no-repeat fixed;
+                -webkit-background-size: cover;
+                -moz-background-size: cover;
+                -o-background-size: cover;
+                background-size: cover;
+            }
+            .blog-body {
+                background: url("https://cdn.pixabay.com/photo/2015/05/31/11/25/desk-791178_960_720.jpg") 50% no-repeat fixed;
+                -webkit-background-size: cover;
+                -moz-background-size: cover;
+                -o-background-size: cover;
+                background-size: cover;
+            }
             .head_text {
             color: white;
             }
@@ -51,14 +71,14 @@
                 color: orangered;
                 font-family: 'Pacifico', cursive;
                 font-weight: bold;
-                font-size: 64px;
+                font-size: 48px;
             }
             h2, h4 {
                 color: #0087ff;
             }
             #contact, #about, #projects {
-                padding-top: 75px;
-                padding-bottom: 75px;
+                padding-top: 60px;
+                padding-bottom: 0px;
             }
             #weather-container {
                 padding: 75px;
@@ -77,8 +97,7 @@
                 <a class="navbar-brand" href="{% url 'portfolio:home' %}">Garrett's Portfolio</a>
                 <div id="projects-about-contact">
                     <a class="navbar-brand" href="{% url 'portfolio:home' %}#projects">Projects</a>
-                    <a class="navbar-brand" href="{% url 'portfolio:home' %}#about">About</a>
-                    <a class="navbar-brand" href="{% url 'portfolio:home' %}#contact">Contact</a>
+                    <a class="navbar-brand" href="{% url 'portfolio:home' %}#about-contact">About</a>
                 </div>
                 <div>
                     {% if user.is_authenticated %}
